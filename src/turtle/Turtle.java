@@ -9,7 +9,7 @@ public class Turtle {
     private char penState;
     private Paper pap;
 
-    public Turtle() {
+    public Turtle(int x, int y) {
 
     }
 
