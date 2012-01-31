@@ -18,6 +18,14 @@ public class Position {
 	return y;
     }
 
+    public void setX(int val) {
+	x = val;
+    }
+
+    public void setY(int val) {
+	y = val;
+    }
+
     public String toString() {
 	return ("(" + getX() + ", " + getY() + ")");
     }
