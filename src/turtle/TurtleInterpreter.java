@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import turtle.util.Position;
+import implementations.*;
 
 public class TurtleInterpreter {
 
@@ -61,7 +62,17 @@ public class TurtleInterpreter {
 
     private void newT(String type, String name, int x, int y) {
 	Position pos = new Position(x, y);
-	turtles.put(name, new Turtle(pos, p));
+	if (type.equals("normal")) {
+	    turtles.put(name, new NormalTurtle(pos, p));
+	} else if (type.equals("continuous")) {
+	    turtles.put(name, new ContinuousTurtle(pos, p));
+	} else if (type.equals("bouncy")) {
+	    turtles.put(name, new BouncyTurtle(pos, p));
+	} else if (type.equals("reflecting")) {
+	    turtles.put(name, new ReflectingTurtle(pos, p));
+	} else if (type.equals("wrapping")) {
+	    turtles.put(name, new WrappingTurtle(pos, p));
+	}
     }
 
     private void pen(String name, String state) {

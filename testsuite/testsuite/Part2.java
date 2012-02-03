@@ -1,5 +1,7 @@
 package testsuite;
 
+import java.io.UnsupportedEncodingException;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -24,27 +26,27 @@ public class Part2 {
     public CatchExitRule disableSystemExit = new CatchExitRule();
 
     @Test
-    public void testBouncyTurtles() {
-        assertEquals(readFile("testcases/outputs/turtles_bouncy.res"), runMain(
-                "testcases/inputs/turtles_bouncy.dat", tmpFolder));
+    public void testBouncyTurtles() throws UnsupportedEncodingException {
+	assertEquals(readFile("testcases/outputs/turtles_bouncy.res"),
+		runMain("testcases/inputs/turtles_bouncy.dat", tmpFolder));
     }
-    
+
     @Test
-    public void testReflectingTurtles() {
-        assertEquals(readFile("testcases/outputs/turtles_reflecting.res"), runMain(
-                "testcases/inputs/turtles_reflecting.dat", tmpFolder));
+    public void testReflectingTurtles() throws UnsupportedEncodingException {
+	assertEquals(readFile("testcases/outputs/turtles_reflecting.res"),
+		runMain("testcases/inputs/turtles_reflecting.dat", tmpFolder));
     }
-    
+
     @Test
-    public void testContinuousTurtles() {
-        assertEquals(readFile("testcases/outputs/turtles_continuous.res"), runMain(
-                "testcases/inputs/turtles_continuous.dat", tmpFolder));
+    public void testContinuousTurtles() throws UnsupportedEncodingException {
+	assertEquals(readFile("testcases/outputs/turtles_continuous.res"),
+		runMain("testcases/inputs/turtles_continuous.dat", tmpFolder));
     }
-    
+
     @Test
-    public void testWrappingTurtles() {
-        assertEquals(readFile("testcases/outputs/turtles_wrapping.res"), runMain(
-                "testcases/inputs/turtles_wrapping.dat", tmpFolder));
+    public void testWrappingTurtles() throws UnsupportedEncodingException {
+	assertEquals(readFile("testcases/outputs/turtles_wrapping.res"),
+		runMain("testcases/inputs/turtles_wrapping.dat", tmpFolder));
     }
-    
+
 }

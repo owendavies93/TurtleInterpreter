@@ -2,13 +2,13 @@ package turtle;
 
 import turtle.util.*;
 
-public class Turtle {
+public abstract class Turtle {
 
-    private Position pos;
-    private Direction dir;
-    private boolean writing;
+    protected Position pos;
+    protected Direction dir;
+    protected boolean writing;
     private char brush;
-    private Paper pap;
+    protected Paper pap;
 
     public Turtle(Position p, Paper paper) {
 	this.pos = new Position(p.getX(), p.getY());
@@ -38,14 +38,5 @@ public class Turtle {
 	pap.mark(brush, pos);
     }
 
-    public void move(int steps) {
-	while (steps-- > 0) {
-	    if (writing) {
-		mark();
-	    }
-	    if (pap.inBounds(dir.move(pos))) {
-		pos = dir.move(pos);
-	    }
-	}
-    }
+    public abstract void move(int steps);
 }
