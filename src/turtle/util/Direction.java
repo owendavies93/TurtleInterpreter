@@ -24,8 +24,8 @@ public enum Direction {
     public Position move(Position pos) {
 	int x = pos.getX(), y = pos.getY();
 	double degToRad = angle * Math.PI / 180;
-	double dx = Math.cos(degToRad);
-	double dy = Math.sin(degToRad);
+	double dx = Math.sin(degToRad);
+	double dy = Math.cos(degToRad);
 	x += Math.round(dx);
 	y += Math.round(dy);
 	return new Position(x, y);

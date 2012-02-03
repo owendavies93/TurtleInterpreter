@@ -1,5 +1,7 @@
 package testsuite;
 
+import java.io.UnsupportedEncodingException;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -24,15 +26,15 @@ public class Part1 {
     public CatchExitRule disableSystemExit = new CatchExitRule();
 
     @Test
-    public void testNormalSquares() {
-        assertEquals(readFile("testcases/outputs/turtle_normal.res"), runMain(
-                "testcases/inputs/turtle_normal.dat", tmpFolder));
+    public void testNormalSquares() throws UnsupportedEncodingException {
+	assertEquals(readFile("testcases/outputs/turtle_normal.res"),
+		runMain("testcases/inputs/turtle_normal.dat", tmpFolder));
     }
-    
+
     @Test
-    public void testNormalsRace() {
-        assertEquals(readFile("testcases/outputs/turtles_normal.res"), runMain(
-                "testcases/inputs/turtles_normal.dat", tmpFolder));
+    public void testNormalsRace() throws UnsupportedEncodingException {
+	assertEquals(readFile("testcases/outputs/turtles_normal.res"),
+		runMain("testcases/inputs/turtles_normal.dat", tmpFolder));
     }
-    
+
 }

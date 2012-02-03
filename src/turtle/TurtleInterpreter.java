@@ -56,8 +56,7 @@ public class TurtleInterpreter {
     }
 
     private void paper(int width, int height) {
-	p.setWidth(width);
-	p.setHeight(height);
+	p = new Paper(width, height);
     }
 
     private void newT(String type, String name, int x, int y) {
@@ -82,7 +81,7 @@ public class TurtleInterpreter {
     }
 
     private void show() {
-	System.out.println(p.convert() + "\n");
+	pS.println(p.convert() + "\r\n");
     }
 
 }
