@@ -81,7 +81,7 @@ public class TurtleInterpreter {
     }
 
     private void show() {
-	pS.println(p.convert() + "\r\n");
+	pS.println(p.convert());
     }
 
 }
