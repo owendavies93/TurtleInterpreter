@@ -23,7 +23,8 @@ public class Paper {
     }
 
     public boolean inBounds(Position p) {
-	return (p.getX() < w) && (p.getY() < h);
+	return (p.getX() < w && p.getX() >= 0)
+		&& (p.getY() < h && p.getY() >= 0);
     }
 
     public void mark(char c, Position p) {

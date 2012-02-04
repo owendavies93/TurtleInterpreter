@@ -12,8 +12,16 @@ public class BouncyTurtle extends Turtle {
 
     @Override
     public void move(int steps) {
-	// TODO Auto-generated method stub
-
+	while (steps-- > 0) {
+	    if (writing) {
+		mark();
+	    }
+	    if (pap.inBounds(dir.move(pos))) {
+		pos = dir.move(pos);
+	    } else {
+		dir = dir.rotate(180);
+	    }
+	}
     }
 
 }

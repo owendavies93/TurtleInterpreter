@@ -12,8 +12,11 @@ public class ContinuousTurtle extends Turtle {
 
     @Override
     public void move(int steps) {
-	// TODO Auto-generated method stub
-
+	while (steps-- > 0) {
+	    if (writing && pap.inBounds(pos)) {
+		mark();
+	    }
+	    pos = dir.move(pos);
+	}
     }
-
 }
