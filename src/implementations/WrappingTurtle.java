@@ -13,7 +13,6 @@ public class WrappingTurtle extends Turtle {
     @Override
     public void move(int steps) {
 	while (steps-- > 0) {
-	    System.out.println(pos);
 	    if (writing) {
 		mark();
 	    }
@@ -42,8 +41,6 @@ public class WrappingTurtle extends Turtle {
 		} else if (x >= w && y >= h) {
 		    pos.setX((x - 1) - w);
 		    pos.setY((y - 1) - h);
-		} else {
-		    System.out.println(x + ", " + y);
 		}
 		pos = dir.move(pos);
 	    }
