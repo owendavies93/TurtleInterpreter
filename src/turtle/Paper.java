@@ -12,6 +12,13 @@ public class Paper {
 	this.w = width;
 	this.h = height;
 	this.sheet = new char[h][w];
+
+	char defaultChar = ' ';
+	for (int i = 0; i < h; i++) {
+	    for (int j = 0; j < w; j++) {
+		sheet[i][j] = defaultChar;
+	    }
+	}
     }
 
     public int getWidth() {
