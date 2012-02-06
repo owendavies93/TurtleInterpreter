@@ -26,16 +26,10 @@ public class ReflectingTurtle extends Turtle {
 		    dir = dir.rotate(45);
 		    if (pap.inBounds(dir.move(pos))) {
 			pos = dir.move(pos);
-			if (writing) {
-			    // mark();
-			}
 			dir = dir.rotate(45);
 		    } else {
 			dir = dir.rotate(-90);
 			pos = dir.move(pos);
-			if (writing) {
-			    // mark();
-			}
 			dir = dir.rotate(-45);
 		    }
 		} else {

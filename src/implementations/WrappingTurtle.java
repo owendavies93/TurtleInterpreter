@@ -22,22 +22,22 @@ public class WrappingTurtle extends Turtle {
 		int x = dir.move(pos).getX(), y = dir.move(pos).getY();
 		int w = pap.getWidth(), h = pap.getHeight();
 		if (x < 0 && y >= 0 && y < h) {
-		    pos.setX(x + w);
+		    pos.setX(x + (w + 1));
 		} else if (x >= w && y >= 0 && y < h) {
 		    pos.setX((x - 1) - w);
 		} else if (y < 0 && x >= 0 && x < w) {
-		    pos.setY(y + h);
+		    pos.setY(y + (h + 1));
 		} else if (y >= h && x >= 0 && x < w) {
 		    pos.setY((y - 1) - h);
 		} else if (x < 0 && y < 0) {
-		    pos.setX(x + w);
-		    pos.setY(y + h);
+		    pos.setX(x + (w + 1));
+		    pos.setY(y + (h + 1));
 		} else if (x < 0 && y >= h) {
-		    pos.setX(x + w);
+		    pos.setX(x + (w + 1));
 		    pos.setY((y - 1) - h);
 		} else if (x >= w && y < 0) {
 		    pos.setX((x - 1) - w);
-		    pos.setY(y + h);
+		    pos.setY(y + (h + 1));
 		} else if (x >= w && y >= h) {
 		    pos.setX((x - 1) - w);
 		    pos.setY((y - 1) - h);
